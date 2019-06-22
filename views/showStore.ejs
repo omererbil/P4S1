@@ -1,0 +1,20 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+    <p><%=store.storeName%></p>
+    <a href="tel:<%=store.phone%>">call</a>
+    <p><%=store.note%></p>
+    <p><%=store.openTime%></p>
+    </div>
+    <div>
+      <%products.forEach(function(product){%>
+        <a href="/showProduct/<%=product._id%>"><img style='width:100;height:120' src="<%= `/uploads/${product.images[0]}` %>"></a>
+      <%})%>
+    </div>
+  </body>
+</html>
